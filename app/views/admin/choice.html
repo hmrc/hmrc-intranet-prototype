@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		
+		<form action="choice_action" method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+						<h1 class="govuk-fieldset__heading">
+							Content type
+						</h1>
+					</legend>
+					<div class="govuk-radios__item">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="content_type_1" name="choice" type="radio" value="content">
+							<label class="govuk-label govuk-radios__label" for="correct-agent-1">
+								Content
+							</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="content_type_2" name="choice" type="radio" value="news">
+							<label class="govuk-label govuk-radios__label" for="correct-agent-2">
+								News
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<button class="govuk-button" data-module="govuk-button">
+				Continue
+			</button>
+			<br>
+			<a class='govuk-link'href=../fmbr-home>Cancel</a>
+		</form>
+	</div>
+
+{% endblock %}	
