@@ -10,7 +10,7 @@
 	<div class="govuk-grid-row">
 		<a href="#" class="govuk-back-link">Back</a>
 		<h1 class="govuk-heading-xl">
-			New Content
+			Content
 		</h1>
 		<div class="govuk-tabs" data-module="govuk-tabs">
 			<h2 class="govuk-tabs__title">
@@ -24,22 +24,29 @@
 				</li>
 				<li class="govuk-tabs__list-item">
 					<a class="govuk-tabs__tab" href="#meta-data">
-						Meta data
+						Metadata
 					</a>
 				</li>
 			</ul>
 			<div class="govuk-tabs__panel" id="copy">
+				<h2 class="govuk-heading-l">Copy</h2>
 				<form action='preview' method="post" class="form">
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="full-name">
 							Title
 						</label>
+						<span id="with-hint-hint" class="govuk-hint">
+							Say what the content is under 65 characters
+						</span>
 						<input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
 					</div>
 					<div class="govuk-form-group">
 						<label class="govuk-label" for="summary">
 							Summary
 						</label>
+						<span id="with-hint-hint" class="govuk-hint">
+							Explain the main point of the content in a sentence ending with a full stop. Keep it under 160 characters and avoid repeating the first line of the body text
+						</span>
 						<input class="govuk-input" id="summary" name="summary" type="text" autocomplete="name" spellcheck="false" value="">
 					</div>
 					<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
@@ -48,7 +55,7 @@
 								Content
 							</label>
 							<span id="with-hint-hint" class="govuk-hint">
-								All content must comply with the gov.uk standards
+								All content must be written in GOV.UK style
 							</span>
 							<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="15" aria-describedby="with-hint-info with-hint-hint"></textarea>
 						</div>
@@ -57,19 +64,183 @@
 						</span>
 					</div>
 					<button class="govuk-button" data-module="govuk-button">
-						Preview content
+						Save and preview
 					</button>
 				</form>
 			</div>
 			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="meta-data">
-				
-				
-				Location<br>
-				Seniority <br>
-				Review date<br>
-				Automatic review action<br>
-				Live date<br>
+				<h2 class="govuk-heading-l">Meta data</h2>
+					
 				Location in information architecture<br>
+
+
+
+
+
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h1 class="govuk-fieldset__heading">
+								When should this item be reviewed?
+							</h1>
+						</legend>
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="seniority" name="seniority" type="radio" value="england">
+								<label class="govuk-label govuk-radios__label" for="seniority">
+									3 months
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="seniority-2" name="seniority" type="radio" value="scotland">
+								<label class="govuk-label govuk-radios__label" for="seniority-2">
+									6 months
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="seniority-3" name="seniority" type="radio" value="wales">
+								<label class="govuk-label govuk-radios__label" for="seniority-3">
+									1 year
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h1 class="govuk-fieldset__heading">
+								What should happen at review?
+							</h1>
+						</legend>
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="seniority" name="seniority" type="radio" value="england">
+								<label class="govuk-label govuk-radios__label" for="seniority">
+									Automatically archived
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="seniority-2" name="seniority" type="radio" value="scotland">
+								<label class="govuk-label govuk-radios__label" for="seniority-2">
+									Reviewed by owner
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>	
+				
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h1 class="govuk-fieldset__heading">
+								Location (optional)
+							</h1>
+						</legend>
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location" name="location" type="radio" value="england">
+								<label class="govuk-label govuk-radios__label" for="location">
+									North
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="scotland">
+								<label class="govuk-label govuk-radios__label" for="location-2">
+									East
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-3" name="location" type="radio" value="wales">
+								<label class="govuk-label govuk-radios__label" for="location-3">
+									South
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-4" name="location" type="radio" value="northern-ireland">
+								<label class="govuk-label govuk-radios__label" for="location-4">
+									West
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h1 class="govuk-fieldset__heading">
+								Live date (optional)
+							</h1>
+						</legend>
+						<span id="passport-issued-hint" class="govuk-hint">
+							Articles without a live date are available imediately after publication
+						</span>
+						<div class="govuk-date-input" id="passport-issued">
+							<div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+									<label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+										Day
+									</label>
+									<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+								</div>
+							</div>
+							<div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+									<label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+										Month
+									</label>
+									<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+								</div>
+							</div>
+							<div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+									<label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+										Year
+									</label>
+									<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h1 class="govuk-fieldset__heading">
+								Seniority (optional)
+							</h1>
+						</legend>
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location" name="location" type="radio" value="england">
+								<label class="govuk-label govuk-radios__label" for="location">
+									North
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="scotland">
+								<label class="govuk-label govuk-radios__label" for="location-2">
+									East
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-3" name="location" type="radio" value="wales">
+								<label class="govuk-label govuk-radios__label" for="location-3">
+									South
+								</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-4" name="location" type="radio" value="northern-ireland">
+								<label class="govuk-label govuk-radios__label" for="location-4">
+									West
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 				
 			</div>
 		</div>
