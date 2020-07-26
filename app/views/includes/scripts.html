@@ -6,6 +6,24 @@
 {% endfor %}
 
 <script src="/public/javascripts/application.js"></script>
+<script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+<script>
+	accessibleAutocomplete.enhanceSelectElement({
+		autoselect: false,
+		placeholder: 'Search for an office',
+		showAllValues: true,
+		dropdownArrow: () => '',
+		selectElement: document.querySelector('#location')
+	})
+
+	accessibleAutocomplete.enhanceSelectElement({
+		autoselect: false,
+		placeholder: 'Search for an grade',
+		showAllValues: true,
+		selectElement: document.querySelector('#grade')
+	})
+</script>
 
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
