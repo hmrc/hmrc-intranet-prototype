@@ -1,0 +1,131 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<h1 class="govuk-heading-xl">
+			QA Check
+		</h1>
+		
+		<div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">
+				Contents
+			</h2>
+			<ul class="govuk-tabs__list">
+				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+					<a class="govuk-tabs__tab" href="#past-day">
+						Desktop
+					</a>
+				</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#past-week">
+						Mobile
+					</a>
+				</li>
+			</ul>
+			<div class="govuk-tabs__panel" id="past-day">
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-two-thirds">
+						<h2 class="govuk-heading-l">Mute button causes conference confusion</h2>
+						<p class="govuk-body-l">A temporary halt to a meeting was caused by a mute button in a conference call today, leaving participants confused for several seconds. </p>
+						<p class="govuk-body">A woman told a co-worker she couldn't hear him on a video conference call today in Worthing. </p>
+						<p class="govuk-body">The hour-long call was to discuss a project the pair were working on, alongside three other colleagues. </p>
+						<p class="govuk-body">Jade Rhondda told of how she saw her colleague Jim's mouth moving but realised she couldn't hear what he was saying.</p>
+						<p class="govuk-body">"I just says to him - Jim I can't hear you. You're on mute or something."</p>
+						<p class="govuk-body">After several seconds of 'awkward silence', Jim found the mute button and resumed his sentence. </p>
+						<p class="govuk-body">The meeting continued as planned.</p>
+					</div>
+				</div>		
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+				<div class="govuk-grid-row">
+					<div class="govuk-grid-column-one-third">
+						<h2 class="govuk-heading-l">Mute button causes conference confusion</h2>
+						<p class="govuk-body-l">A temporary halt to a meeting was caused by a mute button in a conference call today, leaving participants confused for several seconds. </p>
+						<p class="govuk-body">A woman told a co-worker she couldn't hear him on a video conference call today in Worthing. </p>
+						<p class="govuk-body">The hour-long call was to discuss a project the pair were working on, alongside three other colleagues. </p>
+						<p class="govuk-body">Jade Rhondda told of how she saw her colleague Jim's mouth moving but realised she couldn't hear what he was saying.</p>
+						<p class="govuk-body">"I just says to him - Jim I can't hear you. You're on mute or something."</p>
+						<p class="govuk-body">After several seconds of 'awkward silence', Jim found the mute button and resumed his sentence. </p>
+						<p class="govuk-body">The meeting continued as planned.</p>	
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<form action='sent_to_creator_confirm' method="post" class="form">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">
+							Quality assurance decision
+						</h1>
+					</legend>
+					<details class="govuk-details" data-module="govuk-details">
+						<summary class="govuk-details__summary">
+							<span class="govuk-details__summary-text">
+								Show supporting information for making this decision
+							</span>
+						</summary>
+						<div class="govuk-details__text">
+							Set the amount of time that should pass before the owner of the content is notified to review it, or that the content is automatically archived, which should be the default choice
+						</div>
+					</details>
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="seniority" name="seniority" type="radio" value="england">
+							<label class="govuk-label govuk-radios__label" for="seniority">
+								Approve for publishing
+							</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="seniority-2" name="seniority" type="radio" value="scotland">
+							<label class="govuk-label govuk-radios__label" for="seniority-2">
+								Send back to creator
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+					<div class="govuk-form-group">
+						<label class="govuk-label" for="with-hint">
+							Feedback note
+						</label>
+						<span id="with-hint-hint" class="govuk-hint">
+							Refer to specific guidance where possible
+						</span>
+						<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+					</div>
+					<span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+						You can enter up to 5,000 characters
+					</span>
+				</div>
+				</fieldset>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+
+			
+			<button class="govuk-button" data-module="govuk-button">
+				Send
+			</button>
+			<br><a href="index" class="govuk-link govuk-link--no-visited-state">Return to dashboard</a>
+		</form>
+		
+
+	</div>
+
+{% endblock %}	
