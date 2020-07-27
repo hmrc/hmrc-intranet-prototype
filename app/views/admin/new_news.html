@@ -57,6 +57,20 @@
 						<span id="with-hint-hint" class="govuk-hint">
 							All content must be written in GOV.UK style
 						</span>
+												
+						<details class="govuk-details" data-module="govuk-details">
+							<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									More information on Markdown and GOV.UK style
+								</span>
+							</summary>
+							<div class="govuk-details__text">
+								Set the amount of time that should pass before the owner of the content is notified to review it, or that the content is automatically archived, which should be the default choice
+							</div>
+						</details>
+						
+						<img src="/public/images/markdown.png" alt="markdown" width="100%" height="120" />
+						
 						<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="15" aria-describedby="with-hint-info with-hint-hint"></textarea>
 					</div>
 					<span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
@@ -131,13 +145,13 @@
 						</details>
 						<div class="govuk-radios">
 							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="seniority" name="seniority" type="radio" value="england">
+								<input class="govuk-radios__input" id="seniority" name="archive" type="radio" value="england">
 								<label class="govuk-label govuk-radios__label" for="seniority">
 									Archived
 								</label>
 							</div>
 							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="seniority-2" name="seniority" type="radio" value="scotland">
+								<input class="govuk-radios__input" id="seniority-2" name="archive" type="radio" value="scotland">
 								<label class="govuk-label govuk-radios__label" for="seniority-2">
 									Reviewed by owner
 								</label>
