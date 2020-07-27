@@ -22,12 +22,12 @@ const router = express.Router()
 	//Route to edit or published depending on choice
 	router.get('/admin/final_publish_choice_action', function (req, res) {
 		
-		var choice = req.session.data['choice'];
+		var abc = req.session.data['choice'];
 
-		if (choice =='publish') {
+		if (abc =='publish') {
 			res.render('admin/sent_to_publish_confirm', {})
 		}
-		else if (choice =='edit') {
+		else if (abc =='edit') {
 			res.render('admin/edit_news', {})
 		}
 	})
