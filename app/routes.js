@@ -31,6 +31,6 @@ const router = express.Router()
 			res.render('admin/edit_news', {})
 		}
 	})
-	
+
 	
 module.exports = router
